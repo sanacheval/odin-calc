@@ -3,6 +3,7 @@ div.display{
     text-align: center;
     margin: 10px;
     font-size: 40px;
+    padding:10%;
 }
 div.numbers, div.operands, div.options{
     display:flex;
