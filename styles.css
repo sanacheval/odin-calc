@@ -1,0 +1,25 @@
+div.display{
+    border: 1px solid black;
+    text-align: center;
+    margin: 10px;
+    font-size: 40px;
+}
+div.numbers, div.operands, div.options{
+    display:flex;
+    flex-wrap:wrap;
+    align-items: center;
+    margin:5%;
+    padding:5px;
+}
+button.number{
+    font-size:30px;
+    padding:5%;
+    margin:auto;
+    width:30%
+}
+button{
+    font-size: 25px;
+    padding:5%;
+    margin:auto;
+    width:20%;
+}
