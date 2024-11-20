@@ -61,8 +61,8 @@ function display() {
 
                 enter.click();
             }
+            
             //add button text content to display
-            //para.textContent+=b.textContent;
             para.textContent=num1+operator+num2;
         })
     })
@@ -72,16 +72,26 @@ function display() {
         if (num2!=0) {
             //we're at number 2
             //remove the last digit of it
-            num2 = Math.floor(num2/10);
+            if (num2.length===1){
+                num2="";
+            }
+            else{
+                num2 = Math.floor(num2/10);
+            }
         }
         else if(operator!=""){
             operator="";
         }
         else if (num1!=0) {
-            num1 = Math.floor(num1/10);
+            if (num1.length===1){
+                num1="";
+            }
+            else{
+                num1 = Math.floor(num1/10);
+            }
         }
-        console.log(num2);
-        //para.textContent[para.textContent.length]="";
+        
+        para.textContent=num1+operator+num2;
     })
     displaydiv.appendChild(para);
 
@@ -92,8 +102,8 @@ function display() {
         displaydiv.appendChild(para);
         //empty variables but leave result as first number
         num1=para.textContent;
-        num2=0;
-        nums=0;
+        num2='';
+        nums='';
         if(nums!=2){
             operator="";
         }
@@ -102,9 +112,9 @@ function display() {
         para.textContent=""
         displaydiv.appendChild(para);
         //empty variables
-        num1=0;
+        num1='';
         operator="";
-        num2=0;
+        num2='';
         nums=0;
     })
 }
