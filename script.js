@@ -9,22 +9,32 @@ function multiply(a, b) {
     return a*b;
 }
 function divide(a, b) {
-    return a/b;
+    if (Number(b)===0){
+        return "Why are you trying to divide by 0...";
+    }
+    else {
+        return a/b;
+    }
 }
 
 function operate(num1, operator, num2) {
+    let result='';
     if (operator==="+"){
-        return add(num1, num2);
+        result = add(num1, num2);
     }
     else if(operator==="-"){
-        return subtract(num1, num2);
+        result = subtract(num1, num2);
     }
     else if(operator==="x"){
-        return multiply(num1, num2);
+        result = multiply(num1, num2);
     }
     else if(operator==="÷"){
-        return divide(num1, num2);
+        result = divide(num1, num2);
     }
+    if ((result.toString().length>10) && (Number(num2)!=0)) {
+        result=Math.round(result*1e10)/1e10;
+    }
+    return result;
 }
 
 //variables for calculating
@@ -61,7 +71,7 @@ function display() {
 
                 enter.click();
             }
-            
+
             //add button text content to display
             para.textContent=num1+operator+num2;
         })
@@ -76,7 +86,7 @@ function display() {
                 num2="";
             }
             else{
-                num2 = Math.floor(num2/10);
+                num2=num2.slice(0, -1);
             }
         }
         else if(operator!=""){
@@ -87,7 +97,7 @@ function display() {
                 num1="";
             }
             else{
-                num1 = Math.floor(num1/10);
+                num1=num1.slice(0, -1);
             }
         }
         
