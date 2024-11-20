@@ -11,8 +11,8 @@ div.display{
     background-color: rgb(235, 242, 245);
     font-size:8vw;
     margin:60px auto 40px auto;
-    border-radius:50px;
-    width:70vw;
+    border-radius:40px;
+    width:80vw;
 }
 div.calc{
     margin:0vw 12vw;
