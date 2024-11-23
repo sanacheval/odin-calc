@@ -113,10 +113,10 @@ function display() {
         //empty variables but leave result as first number
         num1=para.textContent;
         num2='';
-        nums='';
         if(nums!=2){
             operator="";
         }
+        nums='';
     })
     clear.addEventListener("click", () => {
         para.textContent=""
