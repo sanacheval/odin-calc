@@ -59,7 +59,6 @@ function display() {
             }
             else if(b.className==="operand" && nums===0){
                 operator = b.textContent;
-                //moving on to second number
                 nums+=1;
             }
             else if(b.className==="number" && nums===1){
@@ -113,10 +112,8 @@ function display() {
         //empty variables but leave result as first number
         num1=para.textContent;
         num2='';
-        if(nums!=2){
-            operator="";
-        }
-        nums='';
+        operator="";
+        nums=0;
     })
     clear.addEventListener("click", () => {
         para.textContent=""
